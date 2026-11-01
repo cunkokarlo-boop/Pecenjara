@@ -1,0 +1,44 @@
+name: DXF – regeneriraj i testiraj
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dxf/postavke.json"
+      - "dxf/gen.py"
+      - "dxf/preview.py"
+      - "tests/**"
+      - ".github/workflows/dxf.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dxf
+  cancel-in-progress: false
+
+jobs:
+  dxf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ezdxf matplotlib pytest
+      - name: Testovi
+        run: python -m pytest -q tests
+      - name: Generiraj DXF i pregled
+        run: |
+          python dxf/gen.py dxf/izlaz
+          python dxf/preview.py dxf/izlaz dxf/izlaz/00_PREGLED.png
+      - name: Spremi izlaz ako se promijenio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add dxf/izlaz
+          if git diff --cached --quiet; then echo "DXF bez promjena"; exit 0; fi
+          git commit -m "DXF regeneriran automatski (${GITHUB_SHA::7})"
+          git pull --rebase -q origin main
+          git push origin HEAD:main

@@ -19,6 +19,8 @@ python dxf/gen.py dxf/izlaz
 python dxf/preview.py dxf/izlaz dxf/izlaz/00_PREGLED.png
 python -m pytest -q tests
 ```
+Automatika: GitHub Action `.github/workflows/dxf.yml` nakon svake izmjene `postavke.json`/`gen.py`/testova
+pokrene testove, regenerira `dxf/izlaz/` i sama ga commita (ruka: Actions → Run workflow).
 3D lokalno: `cd web && python -m http.server` (importmap s jsdelivr, three@0.160.0).
 
 ## Zaključano
