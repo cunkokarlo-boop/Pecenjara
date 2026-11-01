@@ -1,0 +1,19 @@
+{
+  "_opis": "Izmjenjive mjere za DXF (mm). Mijenjaj ovdje, ne u gen.py.",
+  "plamenik_osi_x": [175, 425, 675, 925],
+  "os_raznja_y": 350,
+  "plamenik_rupe_m6_dx": 80,
+  "plamenik_rupe_m6_dy": 60,
+  "izrez_plamenika": [176, 131],
+  "rupa_cijev": 14,
+  "rupa_termoelement": 8,
+  "raznj_kvadrat": 16,
+  "utor_nosaca_sirina": 24,
+  "utor_nosaca_dubina": 26,
+  "utori_nosaca_x": [55, 105, 155],
+  "utor_stranice": [260, 410, 30],
+  "ventil_rupa": 12,
+  "ventili_x": [70, 140, 210, 280],
+  "piezo_rupa": 17,
+  "piezo_x": 360
+}

@@ -1,0 +1,47 @@
+PLINSKI RAŽANJ ZA ODOJKA – dijelovi za lasersko rezanje
+Mjere u mm. Sloj REZ = rezati, sloj SAVIJANJE = linija savijanja (ne rezati).
+
+01_strazni_zid_vanjski_1100x700_2mm.dxf
+  Stražnji zid, vanjski | crni lim 2 mm | 1 kom | rez 4.20 m/kom, 25 probijanja/kom
+  Napomena: Rupe za plamenike PROVJERITI prema stvarnom plameniku prije rezanja.
+
+02_strazni_zid_unutarnji_1060x660_2mm.dxf
+  Stražnji zid, unutarnji (4 izreza za plamenike) | crni lim 2 mm | 1 kom | rez 5.90 m/kom, 5 probijanja/kom
+  Napomena: Izrezi 176 × 131 = 175 × 130 + zazor. Provjeriti prema plameniku.
+
+03_bocna_stranica_500x700_2mm.dxf
+  Bočna stranica s utorom za ražanj | crni lim 2 mm | 2 kom | rez 2.73 m/kom, 2 probijanja/kom
+  Napomena: Isti dio 2 kom; desni se montira okrenut (zrcalno). Lijevi rub (x=0) je uz stražnji zid.
+
+04_nosac_raznja_210x80_3mm.dxf
+  Vanjski nosač ražnja s 3 utora | crni lim 3 mm | 2 kom | rez 0.75 m/kom, 3 probijanja/kom
+  Napomena: U-utori širine 24 mm s dnom R12 (kvadrat 16 se okreće, dijagonala 22,6). Montaža izvana na bočnu stranicu: lijevi rub nosača 230 mm od stražnjeg ruba stranice, gornji rub nosača 360 mm od dna stranice (os ražnja na 350). Zavariti ili privijčiti.
+
+05_krov_1150x660_2mm.dxf
+  Krov s prednjim rubom | crni lim 2 mm | 1 kom | rez 3.62 m/kom, 1 probijanja/kom
+  Napomena: Savijanje 90° na 100 mm od prednjeg ruba (y=100).
+
+06_upravljacka_letva_500x180_2mm.dxf
+  Upravljačka letva (4 ventila + piezo) | crni lim 2 mm | 1 kom | rez 1.69 m/kom, 12 probijanja/kom
+  Napomena: Savijanja 90° na y=30 i y=150. Rupe Ø12 za osovine ventila i Ø17 za piezo PROVJERITI prema kupljenim dijelovima.
+
+07_nosac_kutnik_80x60_2mm.dxf
+  Nosač / kutnik za montažu | crni lim 2 mm | 8 kom | rez 0.36 m/kom, 5 probijanja/kom
+  Napomena: Savijanje 90° na y=30.
+
+08_nosac_motora_150x150_3mm.dxf
+  Nosač motora (utor za krak protiv okretanja) | crni lim 3 mm | 1 kom | rez 0.86 m/kom, 6 probijanja/kom
+  Napomena: Utor 20 × 80 za krak motora. Provjeriti prema motoru.
+
+09_glava_vilice_70x50_8mm.dxf
+  Glava vilice | crni lim ili inox 8 mm | 2 kom | rez 0.36 m/kom, 4 probijanja/kom
+  Napomena: Kvadratna rupa 16,5 za ražanj 16. Rupe Ø8,2 za šiljke. Rupu M8 za vijak za stezanje izbušiti i narezati sa strane.
+
+10_tava_razvijena_1130x530_inox1mm.dxf
+  Tava za mast (razvijena) | inox 1 mm | 1 kom | rez 3.32 m/kom, 1 probijanja/kom
+  Napomena: Dno 1050 × 450, stranice 40. Savijanja 90° na 4 linije. Kutove zavariti (TIG) ili zakovati i zabrtviti.
+
+UKUPNO: ~30.2 m reza, ~108 probijanja (sve količine)
+
+Tolerancije: opće ±0,2 mm. Bez skošenja rubova. Ukloniti srh.
+Savijanja (krov, letva, kutnici, tava) rade se na abkantu nakon rezanja.
