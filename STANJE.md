@@ -4,4 +4,4 @@
 
 **Spremno:** DXF 10 dijelova (≈30 m reza, 108 probijanja), 3D, nacrt, popis za narudžbu (≈680 €). Testovi 6/6 zeleni. GitHub Action regenerira DXF nakon svake izmjene postavki (provjereno 1. 11.).
 
-**Otvoreno:** rupe za plamenik/ventile/motor su pretpostavka. Objavljena stranica još nema ispravke iz repoa (3D utor 30 mm, napomena o privremenim rupama, 1. 11.) – sesija bez mreže nije smjela mijenjati artefakt; objaviti `web/` u sljedećoj sesiji.
+**Otvoreno:** rupe za plamenik/ventile/motor su pretpostavka. Objavljena stranica još nema ispravke iz repoa (3D utor 30 mm, napomena o privremenim rupama, 1. 11.) – sesija bez mreže nije smjela mijenjati artefakt; objaviti `web/` u sljedećoj sesiji. Stranica je od 1. 11. JAVNA (svatko s linkom, dijeli s prijateljem) – javni artefakt se može ponovno objaviti samo iz Claude Codea ili claude.ai, ne preko alata za artefakte.
