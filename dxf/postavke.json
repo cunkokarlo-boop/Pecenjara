@@ -15,5 +15,13 @@
   "ventil_rupa": 12,
   "ventili_x": [70, 140, 210, 280],
   "piezo_rupa": 17,
-  "piezo_x": 360
+  "piezo_x": 360,
+  "rupa_m6": 6.5,
+  "cijev_pomak": [-60, 0],
+  "termoelement_pomak": [90, -50],
+  "izrez_pomak": [-20, -20],
+  "letva_rupe_y": 90,
+  "motor_utor": [35, 115, 110, 20],
+  "motor_rupe_xy": [15, 135],
+  "motor_rupa": 6.5
 }

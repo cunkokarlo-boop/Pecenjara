@@ -82,9 +82,9 @@ p.rect(0, 0, 1100, 700)
 for cx in BURNER_X:
     for dx in (-P["plamenik_rupe_m6_dx"], P["plamenik_rupe_m6_dx"]):
         for dy in (-P["plamenik_rupe_m6_dy"], P["plamenik_rupe_m6_dy"]):
-            p.circle(cx + dx, AXIS_Y + dy, 6.5)      # M6 za kućište plamenika
-    p.circle(cx - 60, AXIS_Y, P["rupa_cijev"])                    # prolaz bakrene cijevi Ø8 (s holenderom)
-    p.circle(cx + 90, AXIS_Y - 50, P["rupa_termoelement"])                # prolaz termoelementa
+            p.circle(cx + dx, AXIS_Y + dy, P["rupa_m6"])      # M6 za kućište plamenika
+    p.circle(cx + P["cijev_pomak"][0], AXIS_Y + P["cijev_pomak"][1], P["rupa_cijev"])                    # prolaz bakrene cijevi Ø8 (s holenderom)
+    p.circle(cx + P["termoelement_pomak"][0], AXIS_Y + P["termoelement_pomak"][1], P["rupa_termoelement"])                # prolaz termoelementa
 p.save()
 
 # 02 Stražnji zid, unutarnji 1060 × 660, 2 mm, 4 izreza 176 × 131
@@ -92,7 +92,7 @@ p = Part("02_strazni_zid_unutarnji_1060x660_2mm.dxf", "Stražnji zid, unutarnji 
          "Izrezi 176 × 131 = 175 × 130 + zazor. Provjeriti prema plameniku.")
 p.rect(0, 0, 1060, 660)
 for cx in BURNER_X:
-    p.rect_c(cx - 20, AXIS_Y - 20, *P["izrez_plamenika"])
+    p.rect_c(cx + P["izrez_pomak"][0], AXIS_Y + P["izrez_pomak"][1], *P["izrez_plamenika"])
 p.save()
 
 # 03 Bočna stranica 500 × 700, 2 mm, 2 kom (drugi okrenuti = zrcalno)
@@ -126,8 +126,8 @@ p = Part("06_upravljacka_letva_500x180_2mm.dxf", "Upravljačka letva (4 ventila 
          "Savijanja 90° na y=30 i y=150. Rupe Ø12 za osovine ventila i Ø17 za piezo PROVJERITI prema kupljenim dijelovima.")
 p.rect(0, 0, 500, 180)
 for x in P["ventili_x"]:
-    p.circle(x, 90, P["ventil_rupa"])
-p.circle(P["piezo_x"], 90, P["piezo_rupa"])
+    p.circle(x, P["letva_rupe_y"], P["ventil_rupa"])
+p.circle(P["piezo_x"], P["letva_rupe_y"], P["piezo_rupa"])
 for x in (30, 250, 470):
     p.circle(x, 15, 6.5); p.circle(x, 165, 6.5)
 p.bend(0, 30, 500, 30); p.bend(0, 150, 500, 150)
@@ -145,10 +145,10 @@ p.save()
 p = Part("08_nosac_motora_150x150_3mm.dxf", "Nosač motora (utor za krak protiv okretanja)", "crni lim 3 mm", 1,
          "Utor 20 × 80 za krak motora. Provjeriti prema motoru.")
 p.rect(0, 0, 150, 150)
-p.obround(35, 115, 110, 20)
-for x in (15, 135):
-    for y in (15, 135):
-        p.circle(x, y, 6.5)
+p.obround(*P["motor_utor"])
+for x in P["motor_rupe_xy"]:
+    for y in P["motor_rupe_xy"]:
+        p.circle(x, y, P["motor_rupa"])
 p.save()
 
 # 09 Glava vilice 70 × 50, 8 mm, 2 kom
