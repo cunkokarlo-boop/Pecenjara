@@ -95,11 +95,12 @@ function knobs(M, x0, y, z, n = 4) {
 
 /* ---------- B: kutija sa stražnjim zidom plamenika (preporuka) ---------- */
 function sidePanel(M, x) {
-  // ploča 500 × 700 u ravnini ZY, s vodoravnim utorom za ražanj (z 15..155, y 940..960)
+  // ploča 500 × 700 u ravnini ZY, s vodoravnim utorom za ražanj kao u DXF-u (z 10..160, širina 30, zaobljeni krajevi)
   const s = new THREE.Shape();
   s.moveTo(-250, 600); s.lineTo(250, 600); s.lineTo(250, 1300); s.lineTo(-250, 1300); s.closePath();
   const h = new THREE.Path();
-  h.moveTo(15, 939); h.lineTo(155, 939); h.lineTo(155, 961); h.lineTo(15, 961); h.closePath();
+  h.moveTo(25, 935); h.lineTo(145, 935); h.absarc(145, 950, 15, -Math.PI / 2, Math.PI / 2, false);
+  h.lineTo(25, 965); h.absarc(25, 950, 15, Math.PI / 2, 3 * Math.PI / 2, false);
   s.holes.push(h);
   const geo = new THREE.ExtrudeGeometry(s, { depth: 2, bevelEnabled: false });
   geo.rotateY(-Math.PI / 2);         // shape x → z
