@@ -21,8 +21,7 @@ python -m pytest -q tests
 ```
 Automatika: GitHub Action `.github/workflows/dxf.yml` nakon svake izmjene `postavke.json`/`gen.py`/testova
 pokrene testove, regenerira `dxf/izlaz/` i sama ga commita (ruka: Actions → Run workflow).
-Komentari: tema https://github.com/cunkokarlo-boop/Pecenjara/issues/1 – `obavijest.yml` nakon svakog pusha na main
-upiše popis promjena kao komentar (Karlo i prijatelj komentiraju ispod).
+Pregled za gledanje: tema https://github.com/cunkokarlo-boop/Pecenjara/issues/1 (zaključana, bez komentara i automatike – Karlo 2. 11.).
 3D lokalno: `cd web && python -m http.server` (importmap s jsdelivr, three@0.160.0).
 
 ## Zaključano
